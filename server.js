@@ -31,6 +31,18 @@ app.post("/agendamentos", async (req, res) => {
   res.status(201).json(novoAgendamento);
 });
 
+app.get("/agendamentos/:id" , async (req,res)=>{
+       const {id}= req.params
+
+       const buscandoAgendamentos= await prisma.agendamento.findUnique(
+        {
+            where: {id: id}
+        }
+       )
+
+       res.status(200).json(buscandoAgendamentos)
+})
+
 app.put("/agendamentos/:id", async (req, res) => {
   const { id } = req.params;
   const { cliente, servico, data } = req.body;
@@ -56,7 +68,7 @@ app.delete("/agendamentos/:id", async (req, res) => {
 
   try {
     await prisma.agendamento.delete({
-      where: { id: Number(id) },
+      where: { id: id },
     });
 
     res.status(200).json({ message: "Agendamento cancelado com sucesso" });
