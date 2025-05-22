@@ -61,7 +61,11 @@ Cancelamento de agendamentos.
 Layout agradável, moderno e responsivo.
 
 ![projeto-borcelle](https://github.com/user-attachments/assets/883bf283-159d-4caa-91a2-98a529540765)
+
 🚫 Aviso Importante
 Este projeto foi desenvolvido apenas para fins de estudo e portfólio. A reprodução, cópia ou utilização sem minha autorização não é permitida.
+
+deploy: https://agendamentosandressa.netlify.app/
+
 💻 Desenvolvido por
 Andressa Nunes linkdin: https://www.linkedin.com/in/andressa-nunes-silva/
